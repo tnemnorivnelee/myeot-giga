@@ -72,16 +72,22 @@ When suggesting approaches, factor in that idiomatic Android patterns may be unf
 
 This project treats documentation as part of the development process — the same cycle used in a real company.
 
-**Before implementing a feature:**
-- If it involves a significant technical decision, write an ADR in `docs/decisions/` first.
+Context windows are small. A single task may span multiple chat sessions. Treat each session as a handoff.
 
-**After completing a feature:**
-- Write a dev journal entry in `docs/journal/`. Cover: what was built, key decisions made, problems encountered, and what you'd do differently.
+**Starting a session:**
+- Read the latest `docs/journal/session-NNN-*.md` to understand where the previous session ended.
+- Check `git log --oneline -5` to confirm the current state.
+
+**Ending a session:**
+- Write `docs/journal/session-NNN-[topic].md`. The most critical section is "Next session starts here" — the exact next action, not a vague direction.
+
+**Before implementing a significant technical decision:**
+- Write an ADR in `docs/decisions/` first.
 
 **On release:**
 - Update `CHANGELOG.md`.
 
-Documentation isn't optional. A feature isn't done until the journal entry is written.
+Journal entries are not optional. If the next session can't pick up without asking clarifying questions, the journal failed.
 
 ---
 
