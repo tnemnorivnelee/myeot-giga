@@ -12,6 +12,10 @@ local.properties
 *.keystore
 google-services.json
 
+# Claude Code
+.omc/
+.claude/
+
 # macOS
 .DS_Store
 .AppleDouble
