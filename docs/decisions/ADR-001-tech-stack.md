@@ -28,18 +28,18 @@
 
 Android 홈 화면 위젯은 `AppWidget API`를 통해 구현되며, 앱과 **완전히 분리된 별도 프로세스**에서 `RemoteViews`로만 렌더링된다. React Native의 JavaScript 런타임은 이 프로세스에 접근할 수 없어 위젯 구현이 구조적으로 불가능하다.
 
-### 추가 근거
+### 추가 근거: React Native vs 네이티브 Android
 
-| 요소 | React Native | Kotlin + Compose |
+| 요소 | React Native | 네이티브 Android |
 |------|-------------|-----------------|
 | 홈 화면 위젯 | ❌ 불가 | ✅ AppWidget API |
 | 백그라운드 작업 | 제한적 | ✅ WorkManager |
 | 시스템 API 접근 | 브릿지 필요 | ✅ 직접 접근 |
-| 학습 목표 (네이티브) | 낮음 | ✅ 높음 |
+| 네이티브 개발 학습 | 낮음 | ✅ 높음 |
 
 ### Jetpack Compose를 선택한 이유: React 경험과의 유사성
 
-XML 기반의 기존 Android View 시스템 대신 Jetpack Compose를 선택한 이유는 개발자의 React / TypeScript 경험과 개념 구조가 일치하기 때문이다.
+네이티브 Android를 선택했다면, UI 프레임워크로 기존 XML View 시스템과 Jetpack Compose 중 하나를 골라야 한다. Jetpack Compose를 선택했다. 개발자의 React / TypeScript 경험과 개념 구조가 일치하기 때문이다.
 
 | 개념 | React | Jetpack Compose |
 |------|-------|-----------------|
@@ -53,6 +53,5 @@ XML 기반의 기존 Android View 시스템 대신 Jetpack Compose를 선택한 
 
 ## Consequences
 
-- Kotlin / Android SDK를 새로 학습해야 한다
+- Kotlin 언어와 Android SDK는 새로 학습해야 한다. 단, UI 레이어(Jetpack Compose)는 React의 선언형 패턴과 구조가 같아 상대적으로 빠르게 적응할 수 있다.
 - iOS 지원은 불가 (처음부터 Android only 범위)
-- Jetpack Compose의 선언형 패턴 덕분에 React 경험자는 XML 기반 View 시스템보다 빠르게 적응할 수 있다
