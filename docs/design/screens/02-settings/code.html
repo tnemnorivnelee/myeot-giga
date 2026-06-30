@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>몇기가 - 설정</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v3.2.1/dist/web/static/pretendard.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1d",
+                        "on-tertiary-container": "#8febda",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#cbe7f5",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#c8daff",
+                        "outline-variant": "#c2c6d4",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-primary-fixed": "#001b3d",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "tertiary": "#005248",
+                        "tertiary-fixed": "#97f3e2",
+                        "primary": "#00478d",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#021f29",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#006c5f",
+                        "inverse-primary": "#a9c7ff",
+                        "on-secondary-fixed-variant": "#304a55",
+                        "outline": "#727783",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#005eb8",
+                        "secondary": "#48626e",
+                        "tertiary-fixed-dim": "#7ad7c6",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-container": "#4e6874",
+                        "surface": "#f8f9fa",
+                        "surface-tint": "#005db6",
+                        "secondary-fixed": "#cbe7f5",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#afcbd8",
+                        "on-background": "#191c1d",
+                        "on-surface-variant": "#424752",
+                        "primary-fixed": "#d6e3ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#00468c",
+                        "surface-container": "#edeeef",
+                        "surface-dim": "#d9dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "baseline": "8px",
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "touch-target-min": "56px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Pretendard"],
+                        "body-md": ["Pretendard"],
+                        "headline-lg-mobile": ["Pretendard"],
+                        "label-lg": ["Pretendard"],
+                        "headline-lg": ["Pretendard"],
+                        "title-lg": ["Pretendard"],
+                        "display-lg": ["Pretendard"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "400" }],
+                        "body-md": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "title-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.5px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Material symbols setup */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-lg">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-on-surface border-b border-outline-variant z-40 transition-colors duration-200">
+<div class="flex items-center justify-between px-margin-mobile h-touch-target-min w-full max-w-md mx-auto">
+<button aria-label="뒤로가기" class="flex items-center justify-center w-touch-target-min h-touch-target-min -ml-4 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors duration-200 active:bg-surface-container-highest rounded-full text-on-surface-variant dark:text-outline-variant">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">설정</h1>
+<div class="w-touch-target-min h-touch-target-min"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-md mx-auto px-margin-mobile pt-6 pb-[100px] flex flex-col gap-8">
+<!-- Settings Group: Account / Plan -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest border border-outline-variant/30 overflow-hidden shadow-sm">
+<!-- List Item: Reset Date -->
+<button class="flex items-center justify-between w-full min-h-touch-target-min px-4 py-3 hover:bg-surface-container-low transition-colors duration-200 border-b border-outline-variant/30 active:bg-surface-container-high text-left">
+<div class="flex flex-col flex-grow pr-4">
+<span class="font-title-lg text-title-lg text-on-surface">요금제 초기화 날짜</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-1">매월 데이터가 초기화되는 날짜</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-body-lg text-body-lg text-primary font-bold">1일</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</button>
+<!-- List Item: Data Quota -->
+<button class="flex items-center justify-between w-full min-h-touch-target-min px-4 py-3 hover:bg-surface-container-low transition-colors duration-200 active:bg-surface-container-high text-left">
+<div class="flex flex-col flex-grow pr-4">
+<span class="font-title-lg text-title-lg text-on-surface">기본 데이터 용량</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-body-lg text-body-lg text-primary font-bold">20 GB</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</button>
+</div>
+<!-- Settings Group: Notifications -->
+<div class="flex flex-col gap-baseline">
+<h2 class="font-title-lg text-title-lg text-primary px-2">알림 설정</h2>
+<p class="font-body-md text-body-md text-on-surface-variant px-2 mb-2">사용량이 아래 수치에 도달하면 알림을 받습니다</p>
+<div class="flex flex-wrap gap-3 px-2">
+<!-- Chip 1 -->
+<div class="inline-flex items-center h-[48px] bg-secondary-container text-on-secondary-container rounded-lg px-4 gap-2 border border-outline-variant/50">
+<span class="font-label-lg text-label-lg">10 GB</span>
+<button aria-label="삭제" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-black/10 active:bg-black/20 transition-colors -mr-2">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Chip 2 -->
+<div class="inline-flex items-center h-[48px] bg-secondary-container text-on-secondary-container rounded-lg px-4 gap-2 border border-outline-variant/50">
+<span class="font-label-lg text-label-lg">15 GB</span>
+<button aria-label="삭제" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-black/10 active:bg-black/20 transition-colors -mr-2">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Chip 3 -->
+<div class="inline-flex items-center h-[48px] bg-secondary-container text-on-secondary-container rounded-lg px-4 gap-2 border border-outline-variant/50">
+<span class="font-label-lg text-label-lg">18 GB</span>
+<button aria-label="삭제" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-black/10 active:bg-black/20 transition-colors -mr-2">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Add Button -->
+<button class="mt-4 mx-2 self-start inline-flex items-center justify-center min-h-touch-target-min px-6 bg-primary-container text-on-primary-container rounded-xl font-label-lg text-label-lg hover:bg-primary transition-colors duration-200 hover:text-on-primary active:scale-95 shadow-sm gap-2">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                추가
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-[80px] flex justify-around items-center px-4 pb-safe bg-surface-container dark:bg-inverse-surface border-t border-outline-variant z-50 md:hidden">
+<!-- Inactive: Home -->
+<button aria-label="홈" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-6 py-2 hover:bg-surface-container-highest dark:hover:bg-on-secondary-fixed-variant active:scale-95 transition-transform duration-200 rounded-xl">
+<span class="material-symbols-outlined text-[28px] mb-1" data-icon="home">home</span>
+<span class="font-label-lg text-label-lg">홈</span>
+</button>
+<!-- Active: Settings -->
+<button aria-label="설정" class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-xl px-6 py-2 hover:bg-surface-container-highest dark:hover:bg-on-secondary-fixed-variant active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-[28px] mb-1" data-icon="settings" data-weight="fill">settings</span>
+<span class="font-label-lg text-label-lg">설정</span>
+</button>
+</nav>
+</body></html>

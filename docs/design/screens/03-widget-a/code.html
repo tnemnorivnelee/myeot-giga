@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>몇기가 - 홈 위젯 (Option A)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-high": "#dce9ff",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed": "#2a1700",
+                "background": "#f8f9ff",
+                "secondary-container": "#86f2e4",
+                "on-surface": "#0b1c30",
+                "on-tertiary-container": "#ffeedd",
+                "inverse-surface": "#213145",
+                "outline-variant": "#c3c6d7",
+                "surface-container-low": "#eff4ff",
+                "on-primary-container": "#eeefff",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed": "#ffddb8",
+                "tertiary": "#784b00",
+                "on-tertiary-fixed-variant": "#653e00",
+                "on-primary-fixed": "#00174b",
+                "primary-fixed-dim": "#b4c5ff",
+                "surface-container-highest": "#d3e4fe",
+                "on-error": "#ffffff",
+                "on-error-container": "#93000a",
+                "primary": "#004ac6",
+                "on-secondary-fixed-variant": "#005049",
+                "inverse-primary": "#b4c5ff",
+                "error-container": "#ffdad6",
+                "outline": "#737686",
+                "surface-container-lowest": "#ffffff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-container": "#996100",
+                "on-secondary-fixed": "#00201d",
+                "surface-variant": "#d3e4fe",
+                "on-secondary-container": "#006f66",
+                "surface": "#f8f9ff",
+                "secondary": "#006a61",
+                "tertiary-fixed-dim": "#ffb95f",
+                "primary-container": "#2563eb",
+                "surface-bright": "#f8f9ff",
+                "secondary-fixed-dim": "#6bd8cb",
+                "error": "#ba1a1a",
+                "surface-tint": "#0053db",
+                "secondary-fixed": "#89f5e7",
+                "on-primary-fixed-variant": "#003ea8",
+                "surface-dim": "#cbdbf5",
+                "surface-container": "#e5eeff",
+                "on-background": "#0b1c30",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#434655",
+                "primary-fixed": "#dbe1ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "md": "16px",
+                "margin-mobile": "16px",
+                "xl": "40px",
+                "xs": "4px",
+                "base": "8px",
+                "margin-desktop": "48px",
+                "sm": "12px",
+                "gutter": "24px",
+                "lg": "24px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Pretendard"
+                ],
+                "label-sm": [
+                        "Pretendard"
+                ],
+                "headline-lg-mobile": [
+                        "Pretendard"
+                ],
+                "label-md": [
+                        "Pretendard"
+                ],
+                "body-sm": [
+                        "Pretendard"
+                ],
+                "headline-md": [
+                        "Pretendard"
+                ],
+                "body-lg": [
+                        "Pretendard"
+                ],
+                "headline-lg": [
+                        "Pretendard"
+                ],
+                "headline-xl": [
+                        "Pretendard"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+      },
+    }
+  }
+</script>
+<style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .widget-container {
+            /* Simulating a 4x2 Android widget aspect ratio */
+            aspect-ratio: 4 / 2;
+            width: 100%;
+            max-width: 320px;
+        }
+    </style>
+</head>
+<body class="bg-surface-dim min-h-screen flex items-center justify-center p-4">
+<!-- Widget Preview Wrapper -->
+<div class="relative bg-surface rounded-3xl shadow-lg p-6 widget-container flex flex-col justify-between overflow-hidden">
+<!-- Subtle background texture/gradient for Material 3 feel -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-fixed to-surface-container opacity-30 pointer-events-none"></div>
+<!-- Top Section: App Name & Icon -->
+<div class="relative z-10 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">signal_cellular_alt</span>
+<span class="font-headline-md text-headline-md text-primary tracking-tight">몇기가</span>
+</div>
+<!-- Middle Section: Progress Bar & Data -->
+<div class="relative z-10 mt-4 flex-grow flex flex-col justify-center">
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-4 mb-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[62%] transition-all duration-1000 ease-out" id="progress-bar"></div>
+</div>
+<!-- Data Usage Text -->
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">12.5 <span class="text-xl">GB</span></span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 20 GB</span>
+</div>
+</div>
+<!-- Bottom Section: Timestamp -->
+<div class="relative z-10 mt-auto flex items-center justify-end gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-body-sm font-body-sm">sync</span>
+<span class="text-body-sm font-body-sm">15분 전 업데이트</span>
+</div>
+</div>
+<script>
+        // Simple entry animation for the progress bar
+        document.addEventListener('DOMContentLoaded', () => {
+            const bar = document.getElementById('progress-bar');
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = '62%';
+            }, 100);
+        });
+    </script>
+</body></html>

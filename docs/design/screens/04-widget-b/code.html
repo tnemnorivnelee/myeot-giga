@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>몇기가 - 홈 위젯 B</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1d",
+                        "on-tertiary-container": "#8febda",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#cbe7f5",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#c8daff",
+                        "outline-variant": "#c2c6d4",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-primary-fixed": "#001b3d",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "tertiary": "#005248",
+                        "tertiary-fixed": "#97f3e2",
+                        "primary": "#00478d",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#021f29",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#006c5f",
+                        "inverse-primary": "#a9c7ff",
+                        "on-secondary-fixed-variant": "#304a55",
+                        "outline": "#727783",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#005eb8",
+                        "secondary": "#48626e",
+                        "tertiary-fixed-dim": "#7ad7c6",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-container": "#4e6874",
+                        "surface": "#f8f9fa",
+                        "surface-tint": "#005db6",
+                        "secondary-fixed": "#cbe7f5",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#afcbd8",
+                        "on-background": "#191c1d",
+                        "on-surface-variant": "#424752",
+                        "primary-fixed": "#d6e3ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#00468c",
+                        "surface-container": "#edeeef",
+                        "surface-dim": "#d9dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "3xl": "1.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "baseline": "8px",
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "touch-target-min": "56px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Pretendard", "sans-serif"],
+                        "body-md": ["Pretendard", "sans-serif"],
+                        "body-sm": ["Pretendard", "sans-serif"],
+                        "headline-lg-mobile": ["Pretendard", "sans-serif"],
+                        "label-lg": ["Pretendard", "sans-serif"],
+                        "label-md": ["Pretendard", "sans-serif"],
+                        "headline-lg": ["Pretendard", "sans-serif"],
+                        "title-lg": ["Pretendard", "sans-serif"],
+                        "display-lg": ["Pretendard", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "400" }],
+                        "body-md": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "title-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.5px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>body {
+    font-family: "Pretendard", sans-serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+/* Widget specific styling for preview */
+.widget-preview-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDizLWeyDJoagNjEpVEK58ipU1UfcfLYYo-82QG4ClHsSSscvJ5Pyx5EtpzGOpBqueTdJedkr3_3PXTjN0ekM_jQIJlI6ACOQ5XhHgWHxsXhUd8Fw2ldXm59JT_ts20JUJCm4qiN3vo8yyNGda98CUSLfjhsvGMQuuTYuzc5vIZGY_jINTBp1QbnnvWFn-KGRk8cciRJgpFFfyxav1w9YMl-rpFfyy-0MaU5VAoSZ_htbBJBhKPYJ6YnZpAzXiQVVJVBfnJE2x4VIny)
+    }</style>
+</head>
+<body class="bg-surface-container-low min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Background Context (Simulated Android Home Screen) -->
+<div class="relative w-full max-w-sm aspect-[9/16] bg-cover bg-center rounded-[2.5rem] shadow-2xl overflow-hidden border-8 border-inverse-surface flex items-center justify-center p-6 widget-preview-bg" data-alt="A softly blurred, bright and welcoming abstract smartphone wallpaper background. The image features gentle gradients of soft blue and warm beige, evoking a calm morning sky. The lighting is bright and diffused, fitting perfectly with a modern light-mode interface. The aesthetic is clean, minimalist, and deeply soothing, designed to highlight UI widgets floating on top.">
+<!-- The Widget (4x2 Grid Size approx) -->
+<div class="w-full bg-surface-container-lowest/90 backdrop-blur-md rounded-3xl p-6 shadow-sm border border-white/20 flex flex-col justify-between" style="aspect-ratio: 2/1;">
+<!-- Header: App Name -->
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">signal_cellular_alt</span>
+<span class="font-label-md text-label-md text-primary">몇기가</span>
+</div>
+<!-- Main Content: Progress & Stats -->
+<div class="flex-1 flex flex-col justify-center gap-4">
+<!-- Linear Progress Bar -->
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 62.5%;"></div>
+</div>
+<!-- Text Stats -->
+<div class="flex items-end justify-between">
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-none mb-1">62.5%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">12.5 GB 사용</div>
+</div>
+</div>
+</div>
+<!-- Footer: Update Time -->
+<div class="mt-4 flex items-center gap-1 text-on-surface-variant/70">
+<span class="material-symbols-outlined text-[14px]">update</span>
+<span class="font-body-sm text-[12px]">15분 전 업데이트</span>
+</div>
+</div>
+<!-- Fake App Icons below to show context -->
+<div class="absolute bottom-12 left-0 w-full flex justify-around px-8">
+<div class="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl"></div>
+<div class="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl"></div>
+<div class="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl"></div>
+<div class="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl"></div>
+</div>
+</div>
+</body></html>
