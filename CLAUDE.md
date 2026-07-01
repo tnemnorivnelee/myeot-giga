@@ -89,6 +89,16 @@ Context windows are small. A single task may span multiple chat sessions. Treat 
 
 Journal entries are not optional. If the next session can't pick up without asking clarifying questions, the journal failed.
 
+## 7. Low Coupling, High Cohesion
+
+**Each unit has one reason to change. Depend on interfaces, not internals.**
+
+- If a function/class mixes unrelated responsibilities, split it.
+- Don't reach into another module's internal state — go through its public interface.
+- If fixing one thing breaks something unrelated, that's a coupling problem. Fix the boundary, not the symptom.
+
+The test: Could this module change without forcing changes in unrelated files? If not, the boundary is wrong.
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
